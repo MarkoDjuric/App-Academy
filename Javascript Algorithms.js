@@ -145,3 +145,21 @@ console.log(myIncludes(['a', 'b', 'c', 'e'], 'a')); // true
 console.log(myIncludes(['a', 'b', 'c', 'e'], 'z')); // false
 console.log(myIncludes([43, -7, 11, 13], 11)); // true
 console.log(myIncludes([43, -7, 11, 13], 1)); // false
+
+//Sum Array Recall
+//Write a function sumArray(array) that takes in an array of numbers and returns the total sum of all the numbers.
+
+function sumArray(array) {
+    // your code here...
+let sum = 0;
+
+for (const value of array) {
+  sum += value;
+}
+
+return sum;
+
+}
+
+console.log(sumArray([5, 6, 4])); // => 15
+console.log(sumArray([7, 3, 9, 11])); // => 30
