@@ -130,3 +130,22 @@ console.log(range(217, 220)); // [ 217, 218, 219, 220 ]
 console.log(range(-5, 1)); // [ -5, -4, -3, -2, -1, 0, 1 ]
 console.log(range(10, 3)); // []
 
+//My Includes
+//Write a function myIncludes(arr, target) that accepts an array and an target value as args. The function should return a boolean indicating whether the target is found in the array. Solve this without Array.includes or Array.indexOf.
+
+let myIncludes = function(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        let el = arr[i];
+        if (target === el) {
+            return true;
+        }
+    }
+
+    return false;
+};
+
+console.log(myIncludes(['a', 'b', 'c', 'e'], 'c')); // true
+console.log(myIncludes(['a', 'b', 'c', 'e'], 'a')); // true
+console.log(myIncludes(['a', 'b', 'c', 'e'], 'z')); // false
+console.log(myIncludes([43, -7, 11, 13], 11)); // true
+console.log(myIncludes([43, -7, 11, 13], 1)); // false
