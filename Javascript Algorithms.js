@@ -11,7 +11,6 @@ function logBetweenStepper(min, max, step) {
    }   
 }
 
-
 // Examples:
 logBetweenStepper(5, 9, 1); // prints out:
 // 5
@@ -19,7 +18,6 @@ logBetweenStepper(5, 9, 1); // prints out:
 // 7
 // 8
 // 9
-
 
 logBetweenStepper(-10, 15, 5)  // prints out:
 // -10
