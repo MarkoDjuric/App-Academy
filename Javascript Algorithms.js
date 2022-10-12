@@ -88,4 +88,23 @@ addToArray("MIDDLE", 4, testArray) // "ERROR"
 console.log(testArray) // [0,1,2,3,4]
 
 
+//Reverse String
+//Write a function reverseString(str) that takes in a string. The function should return a new string where the order of the characters is reversed.
+
+// your code here
+function reverseString(str){
+  let revStr = '';
+ let i = str.length-1;
+  console.log(str[i])
+  while (i >= 0) {
+     revStr += "" + str[i]
+    i--
+  }
+  return revStr;
+}
+
+
+console.log(reverseString('fish')); // 'hsif'
+console.log(reverseString('marathon')); // 'nohtaram'
+
 
