@@ -3,10 +3,6 @@
 //The function should print out numbers between min and max at step intervals.
 //See the following examples.
 
-
-
-
-
 function logBetweenStepper(min, max, step) {
    
    let i = min;
