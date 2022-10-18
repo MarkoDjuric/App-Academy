@@ -95,7 +95,7 @@ function reverseString(str){
     i--
   }
   return revStr;
-}
+};
 
 
 console.log(reverseString('fish')); // 'hsif'
@@ -117,7 +117,7 @@ function range(min, max) {
   }
   return rangeArray;
   
-}
+};
 
 console.log(range(3, 10)); // [ 3, 4, 5, 6, 7, 8, 9, 10 ]
 console.log(range(217, 220)); // [ 217, 218, 219, 220 ]
@@ -157,7 +157,7 @@ for (const value of array) {
 
 return sum;
 
-}
+};
 
 console.log(sumArray([5, 6, 4])); // => 15
 console.log(sumArray([7, 3, 9, 11])); // => 30
@@ -182,7 +182,7 @@ function factorsOf(num) {
   }
   
   return factors;
-}
+};
 
 console.log(factorsOf(5)); // [ 1, 5 ]
 console.log(factorsOf(8)); // [ 1, 2, 4, 8 ]
@@ -227,7 +227,7 @@ function firstVowel(str) {
   }
   return null
   
-}
+};
 
 
 console.log(firstVowel('battery')); // 'a'
@@ -235,3 +235,4 @@ console.log(firstVowel('tunnel')); // 'u'
 console.log(firstVowel('dog')); // 'o'
 console.log(firstVowel('conventional')); // 'o'
 console.log(firstVowel('rhythm')); // null
+
