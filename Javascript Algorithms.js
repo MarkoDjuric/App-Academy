@@ -305,3 +305,34 @@ function pitPat(max) {
 
 console.log(pitPat(18)); // [ 4, 6, 8, 16, 18 ]
 console.log(pitPat(30)); // [ 4, 6, 8, 16, 18, 20, 28, 30 ]
+
+//Remove Last Vowel
+//Write a function removeLastVowel(word) that takes in a string and returns the string with its last vowel removed.
+
+// your code here
+function removeLastVowel(word) {
+  var index = 1;
+  let vowels = 'aeiou';
+  let position = 0;
+  let firstVowel;
+  let secondVowel;
+  let reverseIndex = word[word.length - index]; 
+  
+  while (word.length > index) {
+      if(vowels.includes(word[word.length - index])) {
+  
+         return word.slice(0,-index) + word.slice(1-index)
+}
+
+   index++ 
+  }
+                                  
+ return word                     
+                         
+};
+
+
+console.log(removeLastVowel('bootcamp')); // 'bootcmp'
+console.log(removeLastVowel('better')); // 'bettr'
+console.log(removeLastVowel('graph')); // 'grph'
+console.log(removeLastVowel('thy')); // 'thy'
