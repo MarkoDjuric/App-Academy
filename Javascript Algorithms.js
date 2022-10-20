@@ -353,9 +353,7 @@ function pairsMaker(arr) {
     }
 
  }
-  
   return pairsArr; 
-
 }
 
 console.log(pairsMaker(['a', 'b', 'c', 'd'])); // =>
@@ -371,3 +369,28 @@ console.log(pairsMaker(['Rosemary', 'Alex', 'Connor'])); // =>
 //   [ 'Rosemary', 'Connor' ],
 //   [ 'Alex', 'Connor' ] ]
 
+//Rotate Right
+//Write a function rotateRight(array, num) that takes in an array and a number as args.
+//The function should return a new array where the elements of the array are rotated to the right num times. 
+//The function should not mutate the original array and instead return a new array. 
+
+// your code here
+function rotateRight(arr, num) {
+  
+  let slicedIndex = arr.length - num;
+  let rotated = arr.slice(slicedIndex)
+  let noRotated = arr.slice(0,arr.length-num)
+  	for(let i = 0; i < noRotated.length; i++) {
+   		rotated.push(noRotated[i]) 
+ 	}
+  
+  return rotated
+}
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+console.log(rotateRight(arr, 2)); // [ 'd', 'e', 'a', 'b', 'c' ]
+console.log(arr); // [ 'a', 'b', 'c', 'd', 'e' ]
+
+let animals = ['wombat', 'koala', 'opossum', 'kangaroo'];
+console.log(rotateRight(animals, 3)); // [ 'koala', 'opossum', 'kangaroo', 'wombat' ]
+console.log(animals); // [ 'wombat', 'koala', 'opossum', 'kangaroo' ]
