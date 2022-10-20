@@ -394,3 +394,39 @@ console.log(arr); // [ 'a', 'b', 'c', 'd', 'e' ]
 let animals = ['wombat', 'koala', 'opossum', 'kangaroo'];
 console.log(rotateRight(animals, 3)); // [ 'koala', 'opossum', 'kangaroo', 'wombat' ]
 console.log(animals); // [ 'wombat', 'koala', 'opossum', 'kangaroo' ]
+
+
+//Two Dimensional Sum
+//Write a function twoDimensionalSum(arr) that takes in a 2D array of numbers and returns the total sum of all numbers.
+
+// your code here
+function twoDimensionalSum(arr) {
+  let sum = 0;
+ for(let i = 0; i < arr.length; i++) {
+
+   for(let k = 0; k < arr.length; k++) {
+     //console.log(sum)
+     if(arr[i][k]!==undefined){
+     sum += arr[i][k]
+       
+     }
+     
+   }
+ 
+ }
+  return sum
+}
+
+
+let arr1 = [
+    [1, 3],
+    [-4, 7, 10],
+    [2]
+];
+console.log(twoDimensionalSum(arr1)); // 19
+
+let arr2 = [
+    [],
+    [3, 1, 2],
+];
+//console.log(twoDimensionalSum(arr2)); // 6
