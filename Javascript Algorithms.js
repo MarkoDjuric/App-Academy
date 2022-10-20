@@ -514,3 +514,21 @@ function leastCommonMultiple(num1, num2){
 console.log(leastCommonMultiple(4, 6)); // 12
 console.log(leastCommonMultiple(3, 5)); // 15
 console.log(leastCommonMultiple(2, 10)); // 10
+
+//Array Sum
+//Write a function sumArray(arr) that accepts an array as an arg. The function should return the total sum of all values in the array.
+
+
+
+function sumArray(arr) {
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++) {
+    sum += arr[i]
+    
+  }
+  return sum
+}
+
+console.log(sumArray([4, 3, -1, 10])); // 16
+console.log(sumArray([6, 7, 2])); // 15
+console.log(sumArray([])); // 0
