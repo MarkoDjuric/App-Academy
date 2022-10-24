@@ -629,3 +629,30 @@ function longWords(words) {
 
 console.log(longWords(['bike', 'skateboard','scooter', 'moped'])); // [ 'skateboard', 'scooter' ]
 console.log(longWords(['couscous', 'soup', 'ceviche', 'solyanka' ,'taco'])); // [ 'couscous', 'ceviche', 'solyanka' ]
+
+
+//Remove E Words
+//Write a function removeEWords(sentence) that accepts a sentence string as an arg. 
+//The function should return a new string, containing only the words that don't have the letter "e" in them.
+
+
+function removeEWords(sentence) {
+  
+ let str = "";
+ let strToArray = sentence.split(" ");
+  
+  for(let i = 0; i < strToArray.length; i++) {
+    let char = strToArray[i]
+         if(!char.includes('e')) {
+           str += char + " ";           
+         }    
+  }
+  
+  return str;
+};
+
+
+console.log(removeEWords('What time is it everyone?')); // 'What is it'
+console.log(removeEWords('Enter the building')); // 'building'
+
+
