@@ -655,4 +655,35 @@ function removeEWords(sentence) {
 console.log(removeEWords('What time is it everyone?')); // 'What is it'
 console.log(removeEWords('Enter the building')); // 'building'
 
+//Max Value
+//Write a function maxValue(nums) that takes in an array of numbers as an arg. 
+//The function should return the largest number of the array. If the array is empty, the function should return null.
+
+
+function maxValue(nums) {
+	let el = nums[0];
+  
+  	if(nums.length == 0) {
+      
+     return null 
+      
+    }else {
+      
+      for(let i = 1; i < nums.length; i++) {
+       		if(nums[i] > el) {
+               el = nums[i]; 
+            }
+      }
+      
+    }
+  
+  return el;
+  
+};
+
+console.log(maxValue([4, 6, 3, 5, 42, 4])); // 42
+console.log(maxValue([-2, -3, -7, 3 ])); // 3
+console.log(maxValue([])); // null
+
+
 
