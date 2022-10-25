@@ -685,5 +685,23 @@ console.log(maxValue([4, 6, 3, 5, 42, 4])); // 42
 console.log(maxValue([-2, -3, -7, 3 ])); // 3
 console.log(maxValue([])); // null
 
+//Reverse Sentence
+//Write a function reverseSentence(sentence) that takes in a sentence as an arg. The function should return a new sentence where the order of the words is reversed. Note that you should reverse the order among words, not the order among characters.
 
+// your code here
+function reverseSentence(sentence) {
+  let reversed = [];
+  let senArr = sentence.split(" ");
+  
+ 	for(let i = 3; i >= 0 ; i--) {
+      reversed.push(senArr[i]);
+    }
+  
+  return reversed.join(" ");
+  
+};
+
+
+console.log(reverseSentence('I am pretty hungry')); // 'hungry pretty am I'
+console.log(reverseSentence('follow the yellow brick road')); // 'road brick yellow the follow'
 
