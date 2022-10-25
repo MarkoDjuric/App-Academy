@@ -180,7 +180,7 @@ console.log(myIncludes([43, -7, 11, 13], 1)); // false
 
 function sumArray(array) {
     // your code here...
-let sum = 0;
+let sum = 07
 
 for (const value of array) {
   sum += value;
@@ -791,3 +791,38 @@ console.log(arr1); // [ 'a', 'b', 'c' ]
 let arr2 = ['kale', 'spinach', 'collard greens', 'cabbage'];
 console.log(popper(arr2, 1)); // [ 'cabbage' ]
 console.log(arr2); // [ 'kale', 'spinach', 'collard greens' ]
+
+
+//Choose Primes
+//Write a function choosePrimes(nums) that takes in an array of numbers as args. The function should return a new array containing the primes from the original array. A prime number is a number that is only divisible by 1 and itself. Hint: consider creating a helper function to check if a number is prime!
+
+// your code here
+function choosePrimes(nums) {
+  
+  let primes = [];
+  for(let i = 0; i < nums.length; i++) {
+    
+  if(prime(nums[i])){
+    
+   primes.push(nums[i]) 
+  }
+    
+  }
+  
+  return primes;
+}
+
+function prime(num) {
+ if(num < 2) return false;  
+ 
+  for(let i = 2; i < num; i++) {
+   if(num%i === 0) {
+    return false 
+   }   
+  }
+  return true;
+}
+
+
+console.log(choosePrimes([36, 48, 9, 13, 19])); // [ 13, 19 ]
+console.log(choosePrimes([5, 6, 4, 11, 2017])); // [ 5, 11, 2017 ]
