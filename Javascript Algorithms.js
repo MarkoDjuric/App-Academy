@@ -870,3 +870,23 @@ console.log(longestWord('where did everyone go')); // 'everyone'
 console.log(longestWord('prefer simplicity over complexity')); // 'simplicity'
 console.log(longestWord('')); // ''
 
+//Abbreviate
+//Write a function abbreviate(word) that takes in a string arg. The function should return a new string where all of its vowels are removed.
+
+
+
+function longestWord(sentence) {
+	let sentArr = sentence.split(" ");
+    let counter = sentArr[0];
+  for(let i = 1; i < sentArr.length; i++) {
+    if(counter.length < sentArr[i].length){
+       counter = sentArr[i];
+    }
+  }
+  
+  return counter;
+}
+
+console.log(longestWord('where did everyone go')); // 'everyone'
+console.log(longestWord('prefer simplicity over complexity')); // 'simplicity'
+console.log(longestWord('')); // ''
