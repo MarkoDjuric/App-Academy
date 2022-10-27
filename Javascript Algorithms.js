@@ -846,6 +846,27 @@ function fizzBuzz(max) {
 };
 
 
-
 console.log(fizzBuzz(12)); // [ 3, 5, 6, 9, 10 ]
 console.log(fizzBuzz(20)); // [ 3, 5, 6, 9, 10, 12, 18 ]
+
+//Longest Word
+//Write a function longestWord(sentence) that takes in a sentence string as an argument. The function should return the longest word in the sentence.
+
+
+
+function longestWord(sentence) {
+	let sentArr = sentence.split(" ");
+    let counter = sentArr[0];
+  for(let i = 1; i < sentArr.length; i++) {
+    if(counter.length < sentArr[i].length){
+       counter = sentArr[i];
+    }
+  }
+  
+  return counter;
+}
+
+console.log(longestWord('where did everyone go')); // 'everyone'
+console.log(longestWord('prefer simplicity over complexity')); // 'simplicity'
+console.log(longestWord('')); // ''
+
