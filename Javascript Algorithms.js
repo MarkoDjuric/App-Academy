@@ -910,3 +910,37 @@ function productWithReduce(nums) {
 }
 console.log(productWithReduce([10, 3, 5, 2])); // 300
 console.log(productWithReduce([4, 3])); // 12
+
+//Remove Last Vowel Recall
+//Write a function removeLastVowel(word) that takes in a string and returns the string with its last vowel removed.
+
+// your code here
+function removeLastVowel(word) {
+  
+ let last = "";
+ let vowels = "aeiou";
+  let i = word.length;
+let index = 1;
+  let rev = '';
+  while(i > 0) {
+    index++;
+    console.log(index)
+    if(vowels.includes(word[i])) {
+       
+    break   
+    }else {
+      if(word[i]!== undefined){
+         rev = word[i] + rev; 
+      }
+    }
+    i--
+  }
+  
+return word.slice(0,index) + rev
+}
+
+
+console.log(removeLastVowel('bootcamp')); // 'bootcmp'
+console.log(removeLastVowel('better')); // 'bettr'
+console.log(removeLastVowel('graph')); // 'grph'
+console.log(removeLastVowel('thy')); // 'thy'
