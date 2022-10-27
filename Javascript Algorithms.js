@@ -944,3 +944,38 @@ console.log(removeLastVowel('bootcamp')); // 'bootcmp'
 console.log(removeLastVowel('better')); // 'bettr'
 console.log(removeLastVowel('graph')); // 'grph'
 console.log(removeLastVowel('thy')); // 'thy'
+
+
+//Abbreviate Words
+/Write a function abbreviateWords(sentence) that takes in a sentence string. The function should return a new sentence where words that are longer than 4 characters have their vowels removed. Hint: Consider creating a helper function to remove all vowels in a string.
+
+// your code here
+function abbreviateWords(sentence){
+  
+ let abbsent = [];
+ let vowels = "aeiou"; 
+ let sentArr = sentence.split(" ");
+  for(let i = 0; i < sentArr.length; i++) {
+      if(sentArr[i].length > 4) {
+      	abbsent.push(deleteVowel(sentArr[i]))
+      }else {
+       abbsent.push(sentArr[i]); 
+      }
+  }
+  return abbsent.join(" ");
+}
+
+function deleteVowel(char){
+ let deleted = "";
+ let vowels = "aeiou";
+  for(let i = 0; i < char.length; i++) {
+        if(!vowels.includes(char[i])){
+           deleted +=  char[i];
+        }
+  }
+
+  return deleted;
+};
+
+console.log(abbreviateWords('what a wonderful place to live')); // what a wndrfl plc to live
+console.log(abbreviateWords('she sends an excellent message ')); // she snds an xcllnt mssg
