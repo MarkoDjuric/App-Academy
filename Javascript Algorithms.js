@@ -1005,3 +1005,34 @@ console.log(containsWord('They are great', 'they')); // true
 console.log(containsWord('caterpillars are great animals', 'cat')); // false
 console.log(containsWord('Cast the net', 'internet')); // false
 
+//Uncompress
+//Write a function uncompress(str) that takes in a "compressed" string as an arg. A compressed string consists of a character immediately followed by the number of times it appears in the "uncompressed" form. The function should return a the uncompressed version of the string. See the examples. 
+
+
+function uncompress(str) {
+let compress= "";
+
+  for(let i = 0; i < str.length; i++) {
+  	let char = str[i];
+    let num = str[i+1];
+   		compress +=  wordPow(char,num)
+   }
+   
+  return compress
+}
+
+
+function wordPow(char, num) {
+ let str = "";
+ let numeric = Number(num);
+  for(let i = 0; i < numeric; i++) {
+   str += char; 
+    
+  }
+  return str;
+};
+
+
+console.log(uncompress('x3y4z2')); // 'xxxyyyyzz'
+console.log(uncompress('a5b2c4z1')); // 'aaaaabbccccz'
+console.log(uncompress('b1o2t1')); // 'boot'
