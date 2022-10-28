@@ -1036,3 +1036,52 @@ function wordPow(char, num) {
 console.log(uncompress('x3y4z2')); // 'xxxyyyyzz'
 console.log(uncompress('a5b2c4z1')); // 'aaaaabbccccz'
 console.log(uncompress('b1o2t1')); // 'boot'
+
+
+//Hipsterfy
+//Write a function hipsterfy(sentence) that takes in a sentence string and returns the sentence where every word is missing it's last vowel.
+
+
+function hipsterfy(str) {
+let strev = "";
+  let hippsterStr = " ";
+let strArr = str.split(" ");
+  console.log(strArr)
+let vowels = "aeiou";
+let counter = 0;
+
+  
+  for(let i = 0; i < strArr.length; i++) {
+        strev = reverse(strArr[i]);
+        counter = indexFinder(strev);
+    	hippsterStr = strev.slice(0,counter) + strev.slice(counter+1) + " " + hippsterStr;
+  }
+  return reverse(hippsterStr);
+}
+
+
+  function reverse(str) {
+    let reversed = "";
+    let i = 0;
+    while(i < str.length) {
+      reversed = str[i] + reversed
+      i++
+    }
+    return reversed;
+  }
+  
+function indexFinder(arr) {
+  let vowels = "aeiou";
+  for(let i = 0; i < arr.length; i++) {
+      if(vowels.includes(arr[i])) {
+           return arr.indexOf(arr[i]); 
+        }
+  }
+}
+
+ 
+
+ 
+console.log(hipsterfy('wake up?')); // 'Whn shold everyon wak p?'
+console.log(hipsterfy('pmactoob')); // 'gt redy fr or bootcmp'
+console.log(hipsterfy('panthers are great animals')); // 'panthrs ar gret animls'
