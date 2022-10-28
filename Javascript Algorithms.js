@@ -949,7 +949,6 @@ console.log(removeLastVowel('thy')); // 'thy'
 //Abbreviate Words
 /Write a function abbreviateWords(sentence) that takes in a sentence string. The function should return a new sentence where words that are longer than 4 characters have their vowels removed. Hint: Consider creating a helper function to remove all vowels in a string.
 
-// your code here
 function abbreviateWords(sentence){
   
  let abbsent = [];
@@ -979,3 +978,30 @@ function deleteVowel(char){
 
 console.log(abbreviateWords('what a wonderful place to live')); // what a wndrfl plc to live
 console.log(abbreviateWords('she sends an excellent message ')); // she snds an xcllnt mssg
+
+//Contains Word
+//Write a function containsWord(sentence, targetWord) that accepts two strings as args.
+//The function should return a boolean indicating whether the targetWord is found inside of the sentence. Solve this without using String's indexOf() or includes() methods.
+
+
+function containsWord(sentence, targetWord) {
+  
+ let sentarr = sentence.split(" ");
+ 
+  for(let i = 0; i < sentarr.length; i++) {
+    let element = sentarr[i];
+     if(element.toLowerCase() === targetWord) {
+        return true 
+     }
+    
+  }
+  return false
+};
+
+
+
+console.log(containsWord('sounds like a plan', 'like')); // true
+console.log(containsWord('They are great', 'they')); // true
+console.log(containsWord('caterpillars are great animals', 'cat')); // false
+console.log(containsWord('Cast the net', 'internet')); // false
+
