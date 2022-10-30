@@ -1147,3 +1147,24 @@ rotate(arr, 2);
 let animals = ['wombat', 'koala', 'opossum', 'kangaroo'];
 rotate(animals, -1);
 console.log(animals); // [ 'koala', 'opossum', 'kangaroo', 'wombat' ]
+
+
+//Addition Mutator
+//Write a function additionMutator that accepts an array and a number as an arguments. 
+//The function should mutate the input array such that every element has the given number added to it.
+
+
+function additionMutator(nums, num) {
+  for(let i = 0; i < nums.length; i++) {
+   nums[i] += num;  
+  }
+  return nums;
+}
+
+let nums1 = [3, 7, 1, 2];
+additionMutator(nums1, 4);
+console.log(nums1);     // [ 7, 11, 5, 6 ]
+
+let nums2 = [11, 9, 4];
+additionMutator(nums2, -1);
+console.log(nums2);     // [ 10, 8, 3 ]
