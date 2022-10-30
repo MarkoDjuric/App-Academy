@@ -1168,3 +1168,33 @@ console.log(nums1);     // [ 7, 11, 5, 6 ]
 let nums2 = [11, 9, 4];
 additionMutator(nums2, -1);
 console.log(nums2);     // [ 10, 8, 3 ]
+
+
+//Alternating Words
+//Write a function alternatingWords that accepts an array of words as an argument. The function should mutate the input array such that the words alternate between fully uppercase or lowercase. The first word should be uppercase.
+
+
+function alternatingWords(array) {
+  
+ for(let i = 0; i < array.length; i++) {
+   
+  	if(array[i][1] === array[i][1].toUpperCase()) {
+    	array[i] = array[i].toLowerCase(); 
+   		 
+  	}else if(array[i][1] === array[i][1].toLowerCase()) {
+    	array[i] = array[i].toUpperCase(); 
+    }
+   
+ }
+  
+  return array
+}
+
+
+let words1 = ['Belka', 'STRELKA', 'laika', 'DEZIK', 'Tsygan'];
+alternatingWords(words1);
+console.log(words1); // [ 'BELKA', 'strelka', 'LAIKA', 'dezik', 'TSYGAN' ]
+
+let words2 = ['Yellowstone', 'Yosemite', 'Zion', 'Acadia'];
+alternatingWords(words2);
+console.log(words2); // [ 'YELLOWSTONE', 'yosemite', 'ZION', 'acadia' ]
