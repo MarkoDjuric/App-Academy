@@ -1266,3 +1266,32 @@ console.log(repeatingTranslate("we like to go running fast"));  // "we likelike 
 console.log(repeatingTranslate("he cannot find the trash"));    // "he cannotot findind thethe trashash"
 console.log(repeatingTranslate("pasta is my favorite dish"));   // "pastapasta is my favoritefavorite dishish"
 console.log(repeatingTranslate("her family flew to France"));   // "herer familyily flewew to FranceFrance"
+
+//Max in Matrix
+//Write a function maxInMatrix(matrix) that takes in a 2-dimensional array (matrix) and returns the largest value in the matrix. The matrix contains at least one value.
+
+function maxInMatrix(matrix) {
+  // your code here...
+  let largest = 0;
+  let count = 0;
+  
+  
+  for(let i = 0; i < matrix.length; i++) {
+             console.log(matrix[i])
+			let arr1 = matrix[i] 
+   		for(let k = 0; k < arr1.length; k++) {
+          count = arr1[k]
+          if(largest < count) {
+           largest = count; 
+          }
+        }
+  }
+  return largest
+}
+
+
+matrix = [[11,  2,-99],
+          [20, 19, 10],
+          [47, 72, 56]]
+
+console.log(maxInMatrix(matrix)); // 72
