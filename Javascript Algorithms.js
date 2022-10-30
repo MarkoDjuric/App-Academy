@@ -1295,3 +1295,45 @@ matrix = [[11,  2,-99],
           [47, 72, 56]]
 
 console.log(maxInMatrix(matrix)); // 72
+
+//Max in Columns
+//Write a function maxColumn(matrix) that takes in a 2-dimensional array (matrix) and returns an array containing the maximum value in each column. The array length should be equal to the number of columns, such that returnArrayi is equal to the max value in the ith column.
+
+function maxColumn(matrix) {
+  // your code here...
+  
+  let tempArr = [];
+  let arrMax = [0];
+  let j = matrix.length;
+  let ind = 0;
+  let kind = 0;
+
+  while(j > 0) {
+
+  	for(let i = ind; i < matrix.length; i++) {
+             
+			let arr1 = matrix[i]
+            //console.log(matrix[i][kind])
+      if(matrix[i][kind] > arrMax[0]) {
+          arrMax[0] = matrix[i][kind]
+        //console.log(arrMax[0])
+      }
+     // console.log(arrMax)
+
+   }
+      tempArr.push(arrMax[0])
+
+    kind +=1
+
+  j-- 
+}
+  return tempArr
+}
+//matrix = [[ 5,  9, 21],
+//[ 9, 19,  6],
+//[12, 14, 15]]
+
+
+matrix = [[ 5, 10,  8,  6],
+          [10,  2,  7,  9],
+[21, 15, 19, 10]]
