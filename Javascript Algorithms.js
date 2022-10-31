@@ -1328,12 +1328,79 @@ function maxColumn(matrix) {
   j-- 
 }
   return tempArr
-}
-//matrix = [[ 5,  9, 21],
-//[ 9, 19,  6],
-//[12, 14, 15]]
+};
+matrix = [[ 5,  9, 21],
+[ 9, 19,  6],
+[12, 14, 15]]
 
 
 matrix = [[ 5, 10,  8,  6],
           [10,  2,  7,  9],
 [21, 15, 19, 10]]
+
+//Lucky Numbers (*)
+//Write a function luckyNumbers(matrix) that takes in a 2-dimensional array (matrix) and returns all lucky numbers in any order. A lucky number is the minimum element in its row and the maximum in its column.
+
+
+function maxColumn(matrix) {
+  const height = matrix.length;
+  const width = matrix[0].length;
+  const minColumns = [];
+  const maxRows = [];
+  
+  for (let col = 0 ; col < width ; col++) {
+    let rowMax = matrix[0][col];
+    
+        for (let i = 1 ; i < height; i++) {
+      //console.log(matrix[i][col])
+        if (matrix[i][col] > rowMax) {
+            rowMax = matrix[i][col];
+        }
+    }
+    maxRows.push(rowMax)
+  }
+
+  
+    for (let col = 0 ; col < height ; col++) {
+   		 let colMax = matrix[col][0];
+
+      	for (let row = 1 ; row < width ; row++) {
+          //console.log(matrix[col][row])
+            if (matrix[col][row] < colMax) {
+                colMax = matrix[col][row];
+            }
+       }
+         
+      minColumns.push(colMax);
+
+    }
+  return luckyFinder(minColumns, maxRows)
+  
+
+}
+
+
+function luckyFinder(minColumns, maxRows) {
+  
+  
+ for(let k = 0; k < minColumns.length; k++) {
+		for(let j = 0; j < maxRows.length; j++) {
+         		if(minColumns[k] === maxRows[j]) {
+                  // console.log(minColumns[k]) 
+                  return minColumns[k];
+                }
+        }
+  }
+    
+}
+
+
+matrix = [[ 5, 10,  8,  6],
+          [10,  2,  7,  9],
+         [21, 15, 19, 10]]
+
+console.log(maxColumn(matrix)); // [12, 19, 21]
+
+
+
+
