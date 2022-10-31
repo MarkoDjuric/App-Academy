@@ -1402,5 +1402,22 @@ matrix = [[ 5, 10,  8,  6],
 console.log(maxColumn(matrix)); // [12, 19, 21]
 
 
+//Yeller
+//Write a function yeller(words) that takes in an array of words. The function should return a new array where each element of the original array is yelled.
 
+
+function yeller(arr) {
+  
+ let yellArr = [];
+  
+  for(let i = 0; i < arr.length; i++) {
+    yellArr.push(arr[i].toUpperCase()+ "!")
+  }
+  
+  return yellArr;
+}
+
+
+console.log(yeller(['hello', 'world'])); // [ 'HELLO!', 'WORLD!' ]
+console.log(yeller(['kiwi', 'orange', 'mango'])); // [ 'KIWI!', 'ORANGE!', 'MANGO!' ]
 
