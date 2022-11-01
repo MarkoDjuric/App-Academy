@@ -59,7 +59,6 @@ console.log(wordWithinArray(
 //Write a function that takes a location, either "FRONT" or "BACK" and adds an element to either the front or back of the given array.
 //If location is anything besides "FRONT" or "BACK", print an error. Your function should not return anything and should mutate the original array. (Hint: Look up the JavaScript functions: push/pop/shift/unshift)
 
-
 function addToArray(location, element, arr) {
     // Your code here
 if (location === "FRONT") {
@@ -1543,4 +1542,20 @@ console.log(firstAndLast([1, 2, 3, 4, 5])); // -4
 console.log(firstAndLast([12, 5]));         // 17
 console.log(firstAndLast([12]));            // 0
 console.log(firstAndLast([7, 11, 3]));      // 4
-//
+
+//Adjacent Sums
+//Write a function adjacentSums that accepts an array of numbers as an argument. The function should return a new array containing the sum of each pair of elements in the input array.
+
+
+function adjacentSums(arr) {
+  let sum = [];
+ for(let i = 0; i < arr.length; i++) {
+   if(i < arr.length-1)
+  		 sum.push(arr[i] + arr[i+1])
+ }
+  return sum 
+}
+
+console.log(adjacentSums([3, 8, 7, 1]));        // [ 11, 15, 8 ]
+console.log(adjacentSums([10, 5, 4, 3, 9]));    // [ 15, 9, 7, 12 ]
+console.log(adjacentSums([2, -3, 3]));          // [-1, 0]
