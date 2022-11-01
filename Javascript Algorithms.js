@@ -1604,3 +1604,32 @@ console.log(doubleSequence(3, 5));  // [3, 6, 12, 24, 48]
 console.log(doubleSequence(5, 3));  // [5, 10, 20]
 console.log(doubleSequence(5, 4));  // [5, 10, 20, 40]
 console.log(doubleSequence(5, 0));  // [ ]
+
+//Reverb
+//Write a function reverb that accepts a word as an argument. The function should return a new word where all letters that come after the last vowel (including the vowel itself) are repeated at the end of the word. If the value passed in is not a string, say someone passes in a number as an argument, then return null.
+
+
+function reverb(str) {
+  if(typeof str !== 'string') {
+   return null;    
+  }
+  let vowels = 'aeiouAEIOU';
+  
+  let i = str.length; 
+  while(i >= 0) {
+    if(vowels.includes(str[i])) {
+     return str + str.slice(i)
+    }
+    
+    i--;
+  }
+  
+  
+}
+
+
+console.log(reverb('running')); // runninging
+console.log(reverb('FAMILY'));  // FAMILYILY
+console.log(reverb('trash'));   // trashash
+console.log(reverb('DISH'));    // DISHISH
+console.log(reverb(197393));    // null
