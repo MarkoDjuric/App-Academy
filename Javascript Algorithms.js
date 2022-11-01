@@ -1582,3 +1582,25 @@ console.log(doubleSequence(3, 5));  // [3, 6, 12, 24, 48]
 console.log(doubleSequence(5, 3));  // [5, 10, 20]
 console.log(doubleSequence(5, 4));  // [5, 10, 20, 40]
 console.log(doubleSequence(5, 0));  // [ ]
+
+//Dynamic Fizz Buzz
+//Write a function dynamicFizzBuzz that accepts three arguments (max, num1, and num2). The function should return an array containing positive numbers less than max that are divisible by num1 or num2, but not both.
+
+
+function doubleSequence(base, length) {
+  
+  let arr = [];
+  
+  for(let i = 1; i <= length; i++) {
+   		arr.push(base * i) 
+  }
+  
+  return arr;
+}
+
+
+console.log(doubleSequence(7, 3));  // [7, 14, 28]
+console.log(doubleSequence(3, 5));  // [3, 6, 12, 24, 48]
+console.log(doubleSequence(5, 3));  // [5, 10, 20]
+console.log(doubleSequence(5, 4));  // [5, 10, 20, 40]
+console.log(doubleSequence(5, 0));  // [ ]
