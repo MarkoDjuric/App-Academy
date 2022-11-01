@@ -1489,3 +1489,34 @@ console.log(commonFactors(4, 8));              // [1, 2, 4]
 console.log(commonFactors(12, 24));            // [1, 2, 3, 4, 6, 12]
 console.log(commonFactors(22, 44));            // [1, 2, 11, 22]
 console.log(commonFactors(7, 9));              // [1]
+
+//Has Double Letter
+//Write a function hasDoubleLetter(str) that accepts a string. The function should return a boolean indicating whether the string contains two of the same character consecutively. If the value passed into the function is not a string, return null.
+
+
+function commonFactors(num1, num2) {
+  let cmf = [];
+  let counter = 0;
+  if(num1 > num2) {
+    	counter = num1;
+  }else{
+      counter = num2;
+    }
+  
+  
+ let i  = 1;
+  while(i <= counter) {
+    if(num1%i === 0 && num2%i === 0 ) {
+    	cmf.push(i)  
+    }
+    i++;
+  }
+    return cmf
+}
+
+console.log(commonFactors(50, 30));            // [1, 2, 5, 10]
+console.log(commonFactors(8, 4));              // [1, 2, 4]
+console.log(commonFactors(4, 8));              // [1, 2, 4]
+console.log(commonFactors(12, 24));            // [1, 2, 3, 4, 6, 12]
+console.log(commonFactors(22, 44));            // [1, 2, 11, 22]
+console.log(commonFactors(7, 9));              // [1]
