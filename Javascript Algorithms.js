@@ -9,7 +9,7 @@ function logBetweenStepper(min, max, step) {
    while (i <= max) {    
        i += step;
    }   
-}
+};
 
 // Examples:
 logBetweenStepper(5, 9, 1); // prints out:
@@ -62,13 +62,19 @@ console.log(wordWithinArray(
 function addToArray(location, element, arr) {
     // Your code here
 if (location === "FRONT") {
-  console.log(arr.unshift(element))
+ 	 console.log(arr.unshift(element))
+	
 }else if (location === "BACK") {
- console.log( arr.push(element)) 
+	
+ 	console.log( arr.push(element)) 
+	
 }else if(location === "MIDDLE"){
-  console.log("ERROR") 
+	
+ 	 console.log("ERROR") 
 }
-}
+	
+};
+
 testArray = [1,2,3]
 
 //Pig Latin Recall
@@ -83,9 +89,10 @@ testArray = [1,2,3]
 // **before the first vowel** to the **end of the word** then add 'ay'
 
 function pigLatinWord(word) {
-  // your code here...
+  
   let vowels = "aeiou";
   let noyayaed = "";
+	
   for(let i = 0; i < word.length; i++) {
    if(vowels.includes(word[i])) {
       if (i > 0) {
