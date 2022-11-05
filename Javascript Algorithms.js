@@ -1659,3 +1659,25 @@ console.log(pairProduct([3, 4, 6, 2, 5], 12)) // true
 console.log(pairProduct([4, 2, 5, 7], 16))    // false
 console.log(pairProduct([8, 4, 9, 3], 8))     // false
 console.log(pairProduct([3], 12))             // false
+
+//Snake to Camel
+//Write a function snakeToCamel that takes in a snake_cased string and returns a PascalCased version of the string. snakecase is where each word is separated with underscores (``). PascalCase is a string where the first char of each word is capital, all other chars lowercase.
+
+
+function snakeToCamel(str) {
+  let array = str.toLowerCase().split("_");
+  let camel = " ";
+  for(let i = 0; i < array.length; i++) {
+   	 camel += array[i][0].toUpperCase() + array[i].slice(1);
+    
+  }
+  
+ return camel
+  
+}; 
+
+
+console.log(snakeToCamel('snakes_go_hiss')); // 'SnakesGoHiss'
+console.log(snakeToCamel('say_hello_world')); // 'SayHelloWorld'
+console.log(snakeToCamel('app_academy_is_cool')); // 'AppAcademyIsCool'
+console.log(snakeToCamel('APp_ACADEMY_iS_cOol')); // 'AppAcademyIsCool'
