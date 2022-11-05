@@ -1704,3 +1704,34 @@ console.log(strangeSums([42, 3, -1, -42]));      // 1
 console.log(strangeSums([-5, 5]));               // 1
 console.log(strangeSums([19, 6, -3, -20]));      // 0
 console.log(strangeSums([9]));                   // 0
+
+
+//Triplet True
+//Write a function tripletTrue that accepts a string as an argument. The function should return a boolean indicating whether or not the the string contains three of the same character consecutively.
+
+
+function tripletTrue(str) {
+      	let caracter = 0;
+
+  for(let i = 0; i < str.length; i++) {
+
+		for(let j = i+1; j < str.length; j++) {
+   				if(str[j] === str[i]) {
+                   caracter += 1
+                  	if(caracter === 3) {
+                     return true 
+                    }
+                }
+        }
+  }
+  
+  
+  return false
+}
+
+
+console.log(tripletTrue('caaabb'));        // true
+console.log(tripletTrue('terrrrrible'));   // true
+console.log(tripletTrue('runninggg'));     // true
+console.log(tripletTrue('bootcamp'));      // false
+console.log(tripletTrue('e'));             // false
