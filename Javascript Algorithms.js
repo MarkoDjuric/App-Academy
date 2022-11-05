@@ -122,16 +122,17 @@ console.log(testArray) // [0,1,2,3,4]
 //Reverse String
 //Write a function reverseString(str) that takes in a string. The function should return a new string where the order of the characters is reversed.
 
-// your code here
 function reverseString(str){
   let revStr = '';
  let i = str.length-1;
   console.log(str[i])
   while (i >= 0) {
      revStr += "" + str[i]
-    i--
+	  
+  i--
   }
   return revStr;
+	
 };
 
 
@@ -142,24 +143,24 @@ console.log(reverseString('marathon')); // 'nohtaram'
 //Range
 //Write a function range(min, max) that takes in two numbers. The function should return an array containing all numbers from min to max inclusive. 
 
-// your code here
-
 function range(min, max) {
  let start = min;
   let end = max
   rangeArray = [];
+	
   while(start <= end) {
     rangeArray.push(start)
     start ++;
   }
-  return rangeArray;
-  
+  return rangeArray
+	
 };
 
 console.log(range(3, 10)); // [ 3, 4, 5, 6, 7, 8, 9, 10 ]
 console.log(range(217, 220)); // [ 217, 218, 219, 220 ]
 console.log(range(-5, 1)); // [ -5, -4, -3, -2, -1, 0, 1 ]
 console.log(range(10, 3)); // []
+
 
 //My Includes
 //Write a function myIncludes(arr, target) that accepts an array and an target value as args. The function should return a boolean indicating whether the target is found in the array. Solve this without Array.includes or Array.indexOf.
@@ -185,8 +186,7 @@ console.log(myIncludes([43, -7, 11, 13], 1)); // false
 //Write a function sumArray(array) that takes in an array of numbers and returns the total sum of all the numbers.
 
 function sumArray(array) {
-    // your code here...
-let sum = 07
+   let sum = 07
 
 for (const value of array) {
   sum += value;
@@ -201,9 +201,7 @@ console.log(sumArray([7, 3, 9, 11])); // => 30
 
 //Factors Of
 //Write a function factorsOf(num) that takes in a number as an arg. 
-//The method should return an array containing all positive numbers that are able to divide into num with no remainder. 
-
-// your code here
+//The method should return an array containing all positive numbers that are able to divide into num with no remainder.
 
 function factorsOf(num) {
   let factors = [];
