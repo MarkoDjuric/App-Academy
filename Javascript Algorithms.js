@@ -154,7 +154,7 @@ function range(min, max) {
     rangeArray.push(start)
     start ++;
   }
-  return rangeArray
+  return rangeArray;
 	
 };
 
@@ -262,7 +262,7 @@ function firstVowel(str) {
     
       } 
   }
-  return null
+  return null;
   
 };
 
@@ -336,8 +336,8 @@ function pitPat(max) {
     }
   }
   
-  return pitArr
-}
+  return pitArr;
+};
 
 
 console.log(pitPat(18)); // [ 4, 6, 8, 16, 18 ]
@@ -364,7 +364,7 @@ function removeLastVowel(word) {
    index++ 
   }
                                   
- return word                     
+ return word;                     
                          
 };
 
@@ -391,7 +391,7 @@ function pairsMaker(arr) {
 
  }
   return pairsArr; 
-}
+};
 
 console.log(pairsMaker(['a', 'b', 'c', 'd'])); // =>
 // [ [ 'a', 'b' ],
@@ -421,8 +421,8 @@ function rotateRight(arr, num) {
    		rotated.push(noRotated[i]) 
  	}
   
-  return rotated
-}
+  return rotated;
+};
 
 let arr = ['a', 'b', 'c', 'd', 'e'];
 console.log(rotateRight(arr, 2)); // [ 'd', 'e', 'a', 'b', 'c' ]
@@ -451,8 +451,8 @@ function twoDimensionalSum(arr) {
    }
  
  }
-  return sum
-}
+  return sum;
+};
 
 
 let arr1 = [
