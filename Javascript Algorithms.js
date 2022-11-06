@@ -1790,11 +1790,9 @@ function zip(nums, strings) {
     j ++;
   }
   
-  return zipped
+  return zipped;
   
-}
-
-
+};
 
 
 console.log(zip([1, 2, 3, 4], ['eins', 'zwei', 'drei', 'vier']));
@@ -1805,3 +1803,24 @@ console.log(zip(['eins', 'zwei', 'drei'], [1, 2, 3]));
 
 console.log(zip(['alef', 'bet'], ['alpha', 'beta']));
 // [ [ 'alef', 'alpha' ], [ 'bet', 'beta' ] ]
+
+//Unique
+//Write a function unique that accepts an array as an argument. The function should return a new array containing elements of the input array, without duplicates.
+
+// Your code here
+function unique(arr) {
+  let uniq = [];
+  uniq.push(arr[0]);	
+  for(let j = 1 ; j < arr.length; j++) {
+      if(!uniq.includes(arr[j])) {
+          uniq.push(arr[j])
+        }
+   }
+  
+  return uniq;
+};
+
+
+console.log(unique([1, 1, 2, 3, 3])); // [1, 2, 3]
+console.log(unique([11, 7, 8, 10, 8, 7, 7])); // [11, 7, 8, 10]
+console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
