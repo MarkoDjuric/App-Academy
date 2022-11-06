@@ -33,6 +33,8 @@ logBetweenStepper(-10, 15, 5)  // prints out:
 //The function takes in both a word and an array of words as arguments and returns a boolean that returns true if that string is located inside of the array, or false if it does not.
 
 
+
+
 function wordWithinArray(array, word) {
     // your code here...
    return  array.indexOf(word) > 0
@@ -1767,3 +1769,39 @@ console.log(threeIncreasing([3, 2, 11, 12, 13, 2, 4]));     // true
 console.log(threeIncreasing([2, 7, 8, 9]));                 // true
 console.log(threeIncreasing([7, 2, 4, 5, 2, 1, 6]));        // false
 console.log(threeIncreasing([1, 2, 4, 5, 2, 7, 8]));        // false
+
+
+//Zip
+//Write a function zip that accepts two arrays as arguments. The function should return a two dimensional array with subarrays of length 2 that contain elements at corresponding indices from the input arrays. You may assume that the input arrays have the same length.
+
+// Your code here
+function zip(nums, strings) {
+  
+ 			let zipped = [];
+			let combo = [];	
+    let i = 0;
+  	let j = 0;
+  
+  while(i < nums.length) {
+    
+   zipped.push([nums[i],strings[i]])
+    
+    i ++;
+    j ++;
+  }
+  
+  return zipped
+  
+}
+
+
+
+
+console.log(zip([1, 2, 3, 4], ['eins', 'zwei', 'drei', 'vier']));
+// [ [ 1, 'eins' ], [ 2, 'zwei' ], [ 3, 'drei' ], [ 4, 'vier' ] ]
+
+console.log(zip(['eins', 'zwei', 'drei'], [1, 2, 3]));
+// [ [ 'eins', 1 ], [ 'zwei', 2 ], [ 'drei', 3 ] ]
+
+console.log(zip(['alef', 'bet'], ['alpha', 'beta']));
+// [ [ 'alef', 'alpha' ], [ 'bet', 'beta' ] ]
