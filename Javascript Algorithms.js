@@ -2068,3 +2068,30 @@ console.log(prevPrime(7));  // 5
 console.log(prevPrime(4));  // 3
 console.log(prevPrime(2));  // null
 console.log(prevPrime(1));  // null
+
+
+//Has Three Vowels (*)
+
+function hasThreeVowels(str) {
+  
+ let counter = 0;
+ let vowels = 'aeiou';
+ let char = "";
+  
+  for(let i = 0; i < str.length; i++) {
+  		if(vowels.includes(str[i]) && !(char.includes(str[i]))) {
+          		char += str[i];
+         		counter += 1; 
+        }
+  }
+  
+  return counter === 3 || counter > 3;
+  
+}  
+
+
+console.log(hasThreeVowels('delicious'));       //  true
+console.log(hasThreeVowels('bootcamp prep'));   //  true
+console.log(hasThreeVowels('bootcamp'));        //  false
+console.log(hasThreeVowels('dog'));             //  false
+console.log(hasThreeVowels('go home'));         //  false
