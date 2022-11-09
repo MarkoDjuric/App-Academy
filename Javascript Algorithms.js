@@ -1990,3 +1990,43 @@ console.log(isPerfectSquare(2))     // false
 console.log(isPerfectSquare(40))    // false
 console.log(isPerfectSquare(32))    // false
 console.log(isPerfectSquare(50))    // false
+
+//Prime Factors
+//Write a function primeFactors that accepts a number as an argument. The function should return an array containing all of the prime numbers that can divide the given number.
+
+// Your code here
+function primeFactors(num) {
+ let array = [];
+  
+  for(let i = 2; i <= num; i++) {
+  	let prime  =  isPrime(i);
+    if(num % prime === 0) {
+    array.push(prime)  
+    }
+    
+  }
+  
+  return array;
+  
+}
+
+function isPrime(num) {
+  let i = 2;
+  while(i < num) {
+    
+    if(num % i === 0) {
+       return false;
+    }
+
+  i ++
+ }
+
+   return num
+}
+console.log(primeFactors(12));  // [2, 3]
+console.log(primeFactors(7));   // [7]
+//console.log(primeFactors(16));  // [2]
+console.log(primeFactors(30));  // [2, 3, 5]
+//console.log(primeFactors(35));  // [5, 7]
+//console.log(primeFactors(49));  // [7]
+//console.log(primeFactors(128)); // [2]
