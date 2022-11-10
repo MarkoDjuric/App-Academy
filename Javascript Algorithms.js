@@ -2100,20 +2100,20 @@ console.log(hasThreeVowels('go home'));         //  false
 //Write a function fibonacciSequence that accepts a number as an argument. The function should return an array representing the fibonacci sequence up to the given length. The first and second numbers of the sequence are 1 and 1. To generate subsequent numbers of the sequence, we take the sum of the previous two numbers of the sequence.
 
 function fibonacciSequence(num) {
-  if (num === 0) {
-    return []; 
-  }else if (num === 1) {
-   return [1]; 
-  }
+  	if (num === 0) {
+    	    return []; 
+  	}else if (num === 1) {
+   	   return [1]; 
+        }
   
  	let fib = [1,1];
-    let sum = 0;
+        let sum = 0;
 	for(let i = 0; i < num-2; i++) {
-      sum = fib[i] + fib[i + 1]
+        sum = fib[i] + fib[i + 1]
       	fib.push(sum);
-    }
+        }
       
-return fib
+    return fib
 };
 
 
