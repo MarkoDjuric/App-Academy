@@ -2343,3 +2343,111 @@ console.log(pascalsTriangle(7));
 //     [1, 6, 15, 20, 15, 6, 1]
 // ]
 
+//Most Expensive Groceries
+//You are compiling a price checker for a grocery store. The grocery prices are as follows:
+//butter: $1, eggs: $2, milk: $3, bread: $4, cheese: $5
+//First, create a function called costOfGroceries(groceries) which takes a single array of grocery items and returns the total cost.
+
+// butter: $1
+// eggs: $2
+// milk: $3
+// bread: $4
+// cheese: $5
+
+
+function costOfGroceries(groceries) {
+  	let sum = 0;
+  	let cheese = 5;
+  	let eggs = 2;
+  	let butter = 1;
+  	let milk = 3;
+  	let bread = 4;
+  
+    for(let i = 0; i < groceries.length; i++) {
+		if(groceries[i] === 'cheese') {
+              	sum += 5; 
+        }else if(groceries[i] === 'eggs') {
+            	sum += 2; 
+        }else if(groceries[i] === 'butter') {
+          		sum += 1; 
+        }else if(groceries[i] === 'milk') {
+             sum += 3; 
+        }else if(groceries[i] === 'bread') {
+         		sum += 4; 
+        }
+      
+    }
+  return sum;
+}
+
+
+function mostExpensiveGroceries(groceriesList) {
+    			let value = 0;
+
+  	for(let i = 0; i < groceriesList.length; i ++) {
+      
+		for(let k = 0; k < groceriesList[i]; k++) {
+          
+          
+          let firstValue = groceriesList[i][k];
+          
+            if(groceriesList[i][k] === 'cheese') {
+                    value = 5; 
+              	if(value > firstValue) {
+                    firstValue = value  
+                }
+            }else if(groceriesList[i][k] === 'eggs') {
+                    value = 2;
+              	if(value > firstValue) {
+                    firstValue = value  
+                }
+            }else if(groceriesList[i][k] === 'butter') {
+                    value = 1;
+              	if(value > firstValue) {
+                    firstValue = value  
+                }
+            }else if(groceriesList[i][k] === 'milk') {
+                 	value = 3; 
+              	if(value > firstValue) {
+                    firstValue = value  
+                }
+            }else if(groceriesList[i][k] === 'bread') {
+                    value = 4; 
+              	if(value > firstValue) {
+                    firstValue = value  
+                }
+            }
+          
+        }   
+    }
+  return value;
+}
+
+
+// TESTS
+// DO NOT MODIFY ANYTHING BELOW THIS LINE
+
+const groceriesA = ['cheese', 'butter', 'eggs'];
+const groceriesB = ['eggs', 'milk', 'bread', 'bread'];
+const groceriesC = ['cheese', 'bread'];
+const groceriesD = ['eggs', 'butter'];
+
+costOfGroceries(groceriesA);  // 8
+costOfGroceries(groceriesB);  // 13
+costOfGroceries(groceriesC);  // 9
+costOfGroceries(groceriesD);  // 3
+
+mostExpensiveGroceries([groceriesA, groceriesB, groceriesC, groceriesD]);
+
+let score = 0;
+
+if (costOfGroceries(groceriesA) === 8) score++;
+if (costOfGroceries(groceriesB) === 13) score++;
+if (costOfGroceries(groceriesC) === 9) score++;
+if (costOfGroceries(groceriesD) === 3) score++;
+
+if (mostExpensiveGroceries([groceriesA, groceriesB, groceriesC, groceriesD]) === 1) score++;
+if (mostExpensiveGroceries([groceriesA, groceriesD]) === 0) score++;
+if (mostExpensiveGroceries([groceriesA, groceriesD, groceriesC]) === 2) score++;
+
+console.log("You have scored " + score + "/7 points.");
