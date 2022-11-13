@@ -2266,3 +2266,80 @@ console.log(fib(6));    // 8
 console.log(fib(10));   // 55
 console.log(fib(11));   // 89
 console.log(fib(12));   // 144
+
+
+//Pascal's Triangle
+//Pascal's triangle is a 2-dimensional array with the shape of a pyramid. The top of the pyramid is the number 1. 
+//To generate further levels of the pyramid, every element is the sum of the element above and to the left with the element above and to the right. 
+//Non-existing elements are treated as 0 when calculating the sum. 
+
+
+function pascalsTriangle(num) {
+        let pascals = [[1],[1,1]];
+     	 let next = [1,1];
+let k = 1;
+   	 let i = 0;
+  let spliced = []
+
+
+  if(num == 1) {
+    return [1];
+  }else if(num == 2) {
+    return [1,1];
+  }
+  
+  while(i < num - 2) {
+    let addelement = adjacentSums(pascals[k]);
+    let triangled = firstlast(1,addelement,1) 
+		pascals.push(triangled)    
+        k ++; 
+        i ++; 
+  }
+
+  return pascals
+}
+
+ 	 function adjacentSums(next) {
+		let arr = next;
+   		let sums = [];
+	
+    for(let i = 0; i < arr.length - 1; i++) {
+      let sum = arr[i] + arr[i + 1]
+      sums.push(sum);
+    }
+     
+    return sums
+  };
+
+function firstlast(first, addelement, last) {
+  	let trngl = [];
+  	trngl.push(first);
+  for(let k = 0; k < addelement.length; k++) {
+    	trngl.push(addelement[k])
+  }
+  		trngl.push(last)
+  
+  return trngl;
+}
+
+ 
+console.log(pascalsTriangle(5));
+// [
+//     [1],
+//     [1, 1],
+//     [1, 2, 1],
+//     [1, 3, 3, 1],
+//     [1, 4, 6, 4, 1]
+// ]
+
+console.log(pascalsTriangle(7));
+// [
+//     [1],
+//     [1, 1],
+//     [1, 2, 1],
+//     [1, 3, 3, 1],
+//     [1, 4, 6, 4, 1],
+//     [1, 5, 10, 10, 5, 1],
+//     [1, 6, 15, 20, 15, 6, 1]
+// ]
+
