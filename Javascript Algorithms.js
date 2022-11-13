@@ -33,8 +33,6 @@ logBetweenStepper(-10, 15, 5)  // prints out:
 //The function takes in both a word and an array of words as arguments and returns a boolean that returns true if that string is located inside of the array, or false if it does not.
 
 
-
-
 function wordWithinArray(array, word) {
     // your code here...
    return  array.indexOf(word) > 0
@@ -61,6 +59,7 @@ console.log(wordWithinArray(
 //Write a function that takes a location, either "FRONT" or "BACK" and adds an element to either the front or back of the given array.
 //If location is anything besides "FRONT" or "BACK", print an error. Your function should not return anything and should mutate the original array. (Hint: Look up the JavaScript functions: push/pop/shift/unshift)
 
+
 function addToArray(location, element, arr) {
     // Your code here
 if (location === "FRONT") {
@@ -83,9 +82,7 @@ testArray = [1,2,3]
 //Pig Latin is a fun take on the English language where you move any consonant cluster from the start of the word to the end of the word; when words begin on a vowel, you simply add "-yay". Vowels are "aeiou". 
 //Write a function pigLatinWord that takes in a word string and translates the word into Pig Latin. For this problem use the String's slice() method. The slice() method extracts a section of a string and returns it as a new string, without modifying the original string. 
 
-
 // So the two rules for our version of Pig Latin are:
-
 // 1. For words that start with a vowel, add 'yay' to the end of the word.
 // 2. For words that start with a non-vowel, move all letters that come
 // **before the first vowel** to the **end of the word** then add 'ay'
