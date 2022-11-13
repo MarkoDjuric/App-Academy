@@ -238,7 +238,6 @@ let myIndexOf = function(arr, target) {
             return i;
         }
     }
-
     return -1;
 };
 
@@ -258,8 +257,7 @@ function firstVowel(str) {
   
   for (let x of str) {
       if (vowels.includes(x)) {
-        return x
-    
+        return x;
       } 
   }
   return null;
@@ -326,13 +324,11 @@ console.log(lastVowel('rhythm')); // null
 
 function pitPat(max) {
   
- let pitArr = [];
-  
+  let pitArr = [];
   for(let i = 1; i <= max; i++) {
     
    if((i % 4 == 0) || (i % 6 == 0) && !(i % 4 == 0) && (i % 6 == 0)) {
-     
-     pitArr.push(i)
+     	pitArr.push(i)
     }
   }
   
@@ -357,15 +353,13 @@ function removeLastVowel(word) {
   
   while (word.length > index) {
       if(vowels.includes(word[word.length - index])) {
-  
          return word.slice(0,-index) + word.slice(1-index)
-}
-
+      }
+	  
    index++ 
   }
                                   
- return word;                     
-                         
+ return word;                                            
 };
 
 
