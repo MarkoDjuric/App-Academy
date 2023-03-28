@@ -2476,3 +2476,19 @@ function countVowels(word) {
 console.log(countVowels("bootcamp")); // => 3
 console.log(countVowels("apple")); // => 2
 console.log(countVowels("pizza")); // => 2
+
+
+//Sum Array Recall
+//Write a function sumArray(array) that takes in an array of numbers and returns the total sum of all the numbers.
+
+function sumArray(array) {
+    let counter = 0;
+    for(let i = 0; i < array.length; i ++) {
+        counter += array[i]; 
+    }
+    return counter;
+}
+
+console.log(sumArray([5, 6, 4])); // => 15
+console.log(sumArray([7, 3, 9, 11])); // => 30
+
