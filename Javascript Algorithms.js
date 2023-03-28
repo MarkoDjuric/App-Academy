@@ -2492,3 +2492,31 @@ function sumArray(array) {
 console.log(sumArray([5, 6, 4])); // => 15
 console.log(sumArray([7, 3, 9, 11])); // => 30
 
+//Pig Latin Recall
+//Pig Latin is a fun take on the English language where you move any consonant cluster from the start of the word to the end of the word; when words begin on a vowel
+// you simply add "-yay". Vowels are "aeiou".
+
+
+function pigLatinWord(word) {
+    const vowels = "aeiou";
+    let frstSent = word[0];
+    let secSent = word[1];
+    let indexVowel = 0;
+    
+    if (vowels.includes(frstSent)) {
+        return word + "yay"
+    } else {
+           for(let i = 0 ; i < word.length; i++) {
+                let el = word[i];
+               if(vowels.includes(el)) {
+                   return word.slice(i) + word.slice(0,i) + "ay";
+               }
+                
+           }
+   }
+};
+
+console.log(pigLatinWord("apple")); //=> "appleyay"
+console.log(pigLatinWord("eat")); //=> "eatyay"
+console.log(pigLatinWord("banana")); //=> "ananabay"
+console.log(pigLatinWord("trash")); //=> "ashtray"
