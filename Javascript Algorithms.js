@@ -2365,8 +2365,7 @@ function costOfGroceries(groceries) {
              sum += 3; 
         }else if(groceries[i] === 'bread') {
          		sum += 4; 
-        }
-      
+        }     
     }
   return sum;
 }
@@ -2442,3 +2441,17 @@ if (mostExpensiveGroceries([groceriesA, groceriesD]) === 0) score++;
 if (mostExpensiveGroceries([groceriesA, groceriesD, groceriesC]) === 2) score++;
 
 console.log("You have scored " + score + "/7 points.");
+
+
+
+//Echo Recall
+//Write a function echo that takes in a string and console.logs that string "echo-ized".
+
+function echo(string) {
+  console.log(string.toUpperCase()  + " ... " + string  + " ... " + string.toLowerCase() );
+}
+
+echo("Mom!"); // => prints "MOM! ... Mom! ... mom!"
+echo("hey"); // => prints "HEY ... hey ... hey"
+echo("JUMp"); // => prints "JUMP ... JUMp ... jump"
+
