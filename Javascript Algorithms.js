@@ -2592,3 +2592,47 @@ function uncompress(str){
 console.log(uncompress('x3y4z2')); // 'xxxyyyyzz'
 console.log(uncompress('a5b2c4z1')); // 'aaaaabbccccz'
 console.log(uncompress('b1o2t1')); // 'boot'
+
+
+//Hipsterfy Recall
+//Write a function hipsterfy(sentence) that takes in a sentence string and returns the sentence where every word is missing its last vowel.
+
+
+function hipsterfy(str){
+    let array = str.split(" ");
+    let newStr = '';
+    
+    for(let i = 0; i < array.length; i++){
+        let idx = lastVowel(array[i]);
+        let removed = removeLastVowel(array[i],idx);
+        newStr += removed + " ";
+    }
+    
+    function lastVowel(str){
+         let vowels = 'aeiou';
+         for(let i = 0; i < str.length; i++){
+             let char = str[str.length - i]; 
+            if(vowels.includes(char)){
+                return str.length - i;
+            }
+         }
+    }
+    
+    function removeLastVowel(elem,idx){
+        let str = '';
+        for(let i = 0; i < elem.length; i++) {
+            if(i != idx){
+                str += elem[i]
+            }
+        }
+        return str;
+    }
+    
+    return newStr;
+}
+
+//console.log(hipsterfy('everyone'));
+
+console.log(hipsterfy('When should everyone wake up?')); // 'Whn shold everyon wak p?'
+console.log(hipsterfy('get ready for our bootcamp')); // 'gt redy fr or bootcmp'
+console.log(hipsterfy('panthers are great animals')); // 'panthrs ar gret animls'
