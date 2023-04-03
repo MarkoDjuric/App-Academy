@@ -24,14 +24,11 @@ function keyInObjectArray(objArray, keyString) {
   for(let i = 0; i < objArray.length; i++){
     for( k in objArray[i]){
       if( k === keyString){
-        return true
+        return true;
       }
-  
     }
-   
-}
-  return false 
-
+  }
+  return false; 
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
