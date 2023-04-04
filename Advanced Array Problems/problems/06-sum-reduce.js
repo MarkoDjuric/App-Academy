@@ -13,7 +13,10 @@ console.log(sumWithReduce([])); // 0
 */
 
 let sumWithReduce = function(nums) {
-  // Your code here
+    let sum = nums.reduce(function(accum, el){
+      return accum + el;
+  });
+  return sum;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
