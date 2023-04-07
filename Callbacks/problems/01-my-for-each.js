@@ -1,0 +1,38 @@
+/*******************************************************************************
+Write a function `myForEach` that accepts an array and a callback as arguments.
+The function should call the callback on each element of the array, passing in the
+element, index, and array itself. The function does not need to return any value.
+
+Do not use the built in Array#forEach.
+
+Examples:
+
+myForEach(['a', 'b', 'c'], function (el, i) {
+    console.log(el + ' is at index ' + i);
+}); // prints
+// a is at index 0
+// b is at index 1
+// c is at index 2
+
+let test = [];
+myForEach(['laika', 'belka'], function (el) {
+    test.push(el.toUpperCase());
+});
+console.log(test); // ['LAIKA', 'BELKA']
+*******************************************************************************/
+
+let myForEach = function(arr,cb) {
+        console.log(cb(arr))
+};
+
+let loop = function(arr){
+    for(let i = 0; i < arr.length; i++){
+        console.log(arr[i] + ' is at index ' + i);
+    }
+} 
+
+console.log(myForEach(['a', 'b', 'c'], loop))
+
+
+/*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
+module.exports = myForEach;
