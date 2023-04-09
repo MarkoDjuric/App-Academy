@@ -27,7 +27,8 @@ let reject = function(arr, cb) {
        if(!cb(arr[i])) {
         newArr.push(arr[i]);
        }
-  }
+    }
+    
   return newArr;
 };
 
