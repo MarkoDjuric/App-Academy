@@ -27,8 +27,18 @@ console.log(result4); // true
 
 *******************************************************************************/
 
-let exactly = function() {
-
+let exactly = function(arr, number, cb) {
+    let total = 0;
+    for(let i = 0; i < arr.length; i++){
+       if(cb(arr[i])) {
+        total ++;
+       }
+  }
+  if(total === number){
+      return true;
+  }else {
+    return false;
+  }
 };
 
 
