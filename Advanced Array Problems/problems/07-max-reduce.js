@@ -25,7 +25,7 @@ function maxWithReduce(nums) {
       }
   });
   return maxEl;
-}
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
