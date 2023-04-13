@@ -14,9 +14,9 @@ console.log(tripler([-5, 10, 0, 11])); // [ -15, 30, 0, 33 ]
 // your code here
 function tripler(nums) {
   nums.map(function(el) {
-    el*3
+    el*3;
   });
-  return nums
+  return nums;
 }
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
