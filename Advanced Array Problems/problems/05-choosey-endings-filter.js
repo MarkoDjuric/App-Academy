@@ -37,13 +37,12 @@ let chooseyEndings = function(words, suffix) {
     suffixedArr = words.filter(function(el){
     len = el.length; 
         if(el.slice(len - suffLen) === suffix){
-         return el
-
+           return el;
         }
     });
         return suffixedArr
   } else {
-      return []
+      return [];
   }   
 
 };
