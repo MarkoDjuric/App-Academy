@@ -19,7 +19,7 @@ function longWords(arr) {
     return el.length > 5
   });
    
-}
+};
 
 console.log(longWords(['bike', 'skateboard','scooter', 'moped'])); // [ 'skateboard', 'scooter' ]
 console.log(longWords(['couscous', 'soup', 'ceviche', 'solyanka' ,'taco'])); // [ 'couscous', 'ceviche', 'solyanka' ]
