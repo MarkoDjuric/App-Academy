@@ -17,10 +17,10 @@ console.log(productWithReduce([4, 3])); // 12
 
 
 function productWithReduce(arr) {
-  let product = arr.reduce(function(accum, el) {
-        return accum * el;
+  let product = arr.reduce(function (accum, el) {
+    return accum * el;
   });
-  return product 
+  return product;
 }
 
 
