@@ -26,26 +26,26 @@ console.log(chooseyEndings(17, 'ily'));
 */
 
 
-let chooseyEndings = function(words, suffix) {
-    if (suffix === undefined){
-       return [];
-    }
+let chooseyEndings = function (words, suffix) {
+  if (suffix === undefined) {
+    return [];
+  }
 
-  if(Array.isArray(words)){
+  if (Array.isArray(words)) {
     let suffLen = suffix.length;
     let len;
-    suffixedArr = words.filter(function(el){
-    len = el.length; 
-        if(el.slice(len - suffLen) === suffix){
-           return el;
-        }
+    suffixedArr = words.filter(function (el) {
+      len = el.length;
+      if (el.slice(len - suffLen) === suffix) {
+        return el;
+      }
     });
-        return suffixedArr
+    return suffixedArr;
   } else {
-      return [];
-  }   
-
+    return [];
+  }
 };
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
