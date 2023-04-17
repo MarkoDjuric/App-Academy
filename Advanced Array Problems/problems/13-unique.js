@@ -14,13 +14,13 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 
 */
 
-let unique = function(array) {
-    let arr = [array[0]];
-    array.reduce(function(accum, el){
-        if(!arr.includes(el)){
-            arr.push(el);
-        }
-    });  
+let unique = function (array) {
+  let arr = [array[0]];
+  array.reduce(function(accum, el) {
+    if (!arr.includes(el)) {
+      arr.push(el);
+    }
+  });  
   return arr;
 };
 
