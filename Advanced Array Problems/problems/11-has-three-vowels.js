@@ -15,10 +15,22 @@ console.log(hasThreeVowels('dog'));             //  false
 console.log(hasThreeVowels('go home'));         //  false
 
 */
+let hasThreeVowels = function (string) {
+  const vowels = "aeiou";
+  let stringVowels = ["q"];
+  let arr = string.split("");
 
-let hasThreeVowels = function(string) {
-    // Your code here
+  arr.map(function (el, idx) {
+    if (vowels.includes(el)) {
+      if (!stringVowels.includes(el)) {
+        stringVowels.push(el);
+      }
+    }
+  });
+  console.log(stringVowels);
+  return stringVowels.length >= 4;
 };
+
 
 // Your code here
 
@@ -28,4 +40,4 @@ try {
     module.exports = hasThreeVowels;
 } catch (e) {
     module.exports = null;
-}
+}
