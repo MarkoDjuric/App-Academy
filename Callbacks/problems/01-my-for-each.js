@@ -21,17 +21,18 @@ myForEach(['laika', 'belka'], function (el) {
 console.log(test); // ['LAIKA', 'BELKA']
 *******************************************************************************/
 
-let myForEach = function(arr,cb) {
-        console.log(cb(arr))
+let myForEach = function (arr, cb) {
+  console.log(cb(arr));
 };
 
-let loop = function(arr){
-    for(let i = 0; i < arr.length; i++){
-        console.log(arr[i] + ' is at index ' + i);
-    }
-} 
+let loop = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i] + " is at index " + i);
+  }
+};
 
-console.log(myForEach(['a', 'b', 'c'], loop))
+
+
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
