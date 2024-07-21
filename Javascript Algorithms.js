@@ -2689,3 +2689,32 @@ console.log(repeatingTranslate("we like to go running fast"));  // "we likelike 
 console.log(repeatingTranslate("he cannot find the trash"));    // "he cannotot findind thethe trashash"
 console.log(repeatingTranslate("pasta is my favorite dish"));   // "pastapasta is my favoritefavorite dishish"
 console.log(repeatingTranslate("her family flew to France"));   // "herer familyily flewew to FranceFrance"
+
+
+//Two Dimensional Sum
+
+//Write a function twoDimensionalSum(arr) that takes in a 2D array of numbers and returns the total sum of all numbers.
+
+function twoDimensionalSum(arr1) {
+    let sum = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        for (let k = 0; k < arr1[i].length; k++) {
+            sum += arr1[i][k];
+        }
+    }
+    
+    return sum;
+};
+
+let arr1 = [
+    [1, 3],
+    [-4, 7, 10],
+    [2]
+];
+console.log(twoDimensionalSum(arr1)); // 19
+
+let arr2 = [
+    [],
+    [3, 1, 2],
+];
+console.log(twoDimensionalSum(arr2)); // 6
