@@ -2836,3 +2836,26 @@ console.log(matrixAddition(matrixA, matrixB)); // [[11, 6], [7, 7]]
 console.log(matrixAddition(matrixA, matrixC)); // [[1, 5], [4, 6]]
 console.log(matrixAddition(matrixB, matrixC)); // [[8, 1], [3, -1]]
 console.log(matrixAddition(matrixD, matrixE)); // [[2, -5], [19, 14], [6, 4]]
+
+
+
+// Zip
+//Write a function zip that accepts two arrays as arguments. 
+//The function should return a two dimensional array with subarrays of length 2 that contain elements at corresponding indices from the input arrays.
+//You may assume that the input arrays have the same length.
+
+let zip = function(array1, array2) {
+    let zipped = [];
+    for (let i = 0; i < array1.length; i++) {
+        let el1 = array1[i];
+        let el2 = array2[i];
+        zipped.push([el1, el2]);
+    }
+    return zipped;
+};
+
+console.log(zip([1, 2, 3, 4], ['eins', 'zwei', 'drei', 'vier']));
+// [ [ 1, 'eins' ], [ 2, 'zwei' ], [ 3, 'drei' ], [ 4, 'vier' ] ]
+
+console.log(zip(['eins', 'zwei', 'drei'], [1, 2, 3]));
+// [ [ 'eins', 1 ], [ 'zwei', 2 ], [ 'drei', 3 ] ]
