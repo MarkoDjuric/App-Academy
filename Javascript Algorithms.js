@@ -2859,3 +2859,59 @@ console.log(zip([1, 2, 3, 4], ['eins', 'zwei', 'drei', 'vier']));
 
 console.log(zip(['eins', 'zwei', 'drei'], [1, 2, 3]));
 // [ [ 'eins', 1 ], [ 'zwei', 2 ], [ 'drei', 3 ] ]
+
+
+
+//Lucky Numbers
+//Write a function luckyNumbers(matrix) that takes in a 2-dimensional array (matrix) and returns all lucky numbers in any order. 
+//A lucky number is the minimum element in its row and the maximum in its column.
+
+function luckyNumbers(matrix) {
+  let minNumbers = [];
+  let maxNumbers = [];
+  let sizeOfArray = matrix.length;
+  let sizeOfSubArray = matrix[0].length;
+  let longerLen;
+  
+  for(let i = 0; i < sizeOfArray; i++){
+    let firstEl = matrix[i][0];
+      for(let j = 1; j < sizeOfSubArray; j++){
+        firstEl = Math.min(firstEl,matrix[i][j])      
+     }  
+    minNumbers.push(firstEl);  
+  }
+
+
+  for(let k = 0; k < sizeOfSubArray; k++){
+    let firstEl = matrix[0][k];
+      for(let y = 1; y < sizeOfArray; y++){
+        firstEl = Math.max(firstEl,matrix[y][k])      
+     }  
+    maxNumbers.push(firstEl);  
+  }
+
+    if (maxNumbers.length > minNumbers.length) {
+        longerLen = maxNumbers.length;
+    }else {
+        longerLen = minNumbers.length;
+    }
+
+        for (let i = 0; i < longerLen; i++) {
+            if (maxNumbers.includes(minNumbers[i])) {
+                return minNumbers[i];
+            }
+        }
+ 
+}
+
+matrix = [[ 5,  9, 21],
+          [ 9, 19,  6],
+          [12, 14, 15]]
+
+console.log(luckyNumbers(matrix)); // [12]
+
+matrix = [[ 5, 10,  8,  6],
+          [10,  2,  7,  9],
+          [21, 15, 19, 10]]
+
+console.log(luckyNumbers(matrix));// [10] 
