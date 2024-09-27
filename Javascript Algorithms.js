@@ -2964,3 +2964,48 @@ matrix = [[1, 2, 3, 4],
 
 console.log(spiralOrder(matrix)); // [1,2,3,4,8,12,11,10,9,5,6,7]
 
+
+
+//Pyramid Array
+//Write a function pyramidArray(base) that takes in an array of numbers representing the base of a pyramid. 
+//The function should return a two-dimensional array representing the completed pyramid. 
+//To generate an element of the next level of the pyramid, we sum the elements below and to the left and below and to the right.
+
+
+function pyramidArray(base) {
+    let sum= 0;
+    let len = base.length;
+    let pyramidArr = [base];
+
+    let i = 0;
+    
+    while (i < len-1) {
+        let subPyramidArr = [];
+  
+        for (let j = 0; j <  pyramidArr[0].length-1; j++) {
+            
+            sum = pyramidArr[0][j] + pyramidArr[0][j+1];
+            subPyramidArr.push(sum);
+              
+        }
+         pyramidArr.unshift(subPyramidArr);
+      
+     i++;
+    }
+return pyramidArr
+}
+
+
+let p1 = pyramidArray([2, 3, 7, 5, 9]);
+console.log(p1);
+// [
+//   [ 85 ],
+//   [ 37, 48 ],
+//   [ 15, 22, 26 ],
+//   [ 5, 10, 12, 14 ],
+//   [ 2, 3, 7, 5, 9 ]
+// ]
+
+
+
+
