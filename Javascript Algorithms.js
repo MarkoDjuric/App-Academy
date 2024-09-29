@@ -3134,3 +3134,40 @@ function countVowels(word) {
 console.log(countVowels("bootcamp")); // => 3
 console.log(countVowels("apple")); // => 2
 console.log(countVowels("pizza")); // => 2
+
+
+
+//Uncompress Recall
+//Write a function uncompress(str) that takes in a "compressed" string as an arg. A compressed string consists of a character immediately followed by the number of times it appears in the "uncompressed" form. 
+//The function should return the uncompressed version of the string. See the examples.
+
+
+let uncompress = function(string) {
+    
+    let decoded = '';
+    
+    for(let i = 0; i < string.length; i++) {
+        
+        let char = string[i+1]
+        let str = string[i];
+        let number = Number(char);
+        decoded += multiplyStr(str,number);
+    }
+    
+    return decoded;
+}
+
+
+function multiplyStr(str, number) {
+    let productOfMuliply= '';
+    for(let i = 0; i < number; i++) {
+        productOfMuliply += str;
+        
+    } 
+    
+    return productOfMuliply;
+}
+
+console.log(uncompress('x3y4z2')); // 'xxxyyyyzz'
+console.log(uncompress('a5b2c4z1')); // 'aaaaabbccccz'
+console.log(uncompress('b1o2t1')); // 'boot'
