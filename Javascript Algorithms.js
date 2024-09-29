@@ -3067,3 +3067,33 @@ console.log(pascalsTriangle(7));
 //     [1, 5, 10, 10, 5, 1],
 //     [1, 6, 15, 20, 15, 6, 1]
 // ]
+
+
+//Pig Latin Recall
+//Pig Latin is a fun take on the English language where you move any consonant cluster from the start of the word to the end of the word; when words begin on a vowel, you simply add "-yay". Vowels are "aeiou".
+
+
+function pigLatinWord(word) {
+  
+  let vowels = 'aeiou';
+  let firstChar = word[0];
+  let pigLatinString = '';
+  
+  if (vowels.includes(firstChar)) {
+      return word + "yay"
+  }
+      
+      for (let i = 1; i < word.length; i++) {
+          let char = word[i];
+          
+          if (vowels.includes(char)) {
+              let index = i;
+             return  pigLatinString = word.slice(index) + word.slice(index-1,index) + 'ay'
+          }
+      }
+};
+
+console.log(pigLatinWord("apple")); //=> "appleyay"
+console.log(pigLatinWord("eat")); //=> "eatyay"
+console.log(pigLatinWord("banana")); //=> "ananabay"
+console.log(pigLatinWord("trash")); //=> "ashtray"
