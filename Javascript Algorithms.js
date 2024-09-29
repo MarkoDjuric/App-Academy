@@ -3113,3 +3113,24 @@ function sumArray(array) {
 
 console.log(sumArray([5, 6, 4])); // => 15
 console.log(sumArray([7, 3, 9, 11])); // => 30
+
+
+//Vowel Counter Recall
+//Write a function, countVowels(word), that takes in a string word and returns the number of vowels in the word.
+//Vowels are the letters "a", "e", "i", "o", "u".
+
+function countVowels(word) {
+  let vowels = 'aeiou';
+  let counter = 0;
+  for (let i = 0; i < word.length; i++) {
+      if (vowels.includes(word[i])) {
+          counter ++;
+      }
+  }
+  
+  return counter;
+};
+
+console.log(countVowels("bootcamp")); // => 3
+console.log(countVowels("apple")); // => 2
+console.log(countVowels("pizza")); // => 2
