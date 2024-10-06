@@ -3254,4 +3254,5 @@ let hasThreeVowels = function(string) {
         }
     }
 });
-return stringVowels.length >= 4 
+return stringVowels.length >= 4; 
+};
