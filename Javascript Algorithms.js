@@ -283,7 +283,7 @@ let arr = [];
  }
   
   return arr;
-}
+};
 
 
 console.log(evenNumbers(7)); // [ 2, 4, 6 ]
@@ -475,12 +475,12 @@ function pigLatinWord(word) {
   let vowels = "aeiou";
   let noyayaed = "";
   for(let i = 0; i < word.length; i++) {
-   if(vowels.includes(word[i])) {
-      if (i > 0) {
+    if(vowels.includes(word[i])) {
+       if (i > 0) {
          return word.slice(i) + word.slice(0,i) + 'ay'
-     }else {
-     return word + "yay"
-   }
+       }else {
+     return word + "yay";
+    }
   }
   }
 };
@@ -499,13 +499,13 @@ function leastCommonMultiple(num1, num2){
   let counter = 1;
   let least = true;
   	while(least) {
-      if((counter%num1 === 0) && (counter%num2 === 0)) {
+      if ((counter%num1 === 0) && (counter%num2 === 0)) {
          return counter      
-      }else {
+      } else {
        counter++ 
       }
     }
-}
+};
 
 
 console.log(leastCommonMultiple(4, 6)); // 12
@@ -554,7 +554,7 @@ function averageNum(sum) {
   
   allSum += sum;
   return allSum;
-}
+};
 
 
 console.log(avgVal([5, 10])); // 7.5
@@ -576,7 +576,6 @@ function myIndexOf(arr, target) {
           return i
         }
   }
-  
   return -1;
 };
 
@@ -616,10 +615,9 @@ function longWords(words) {
   let longArr = [];
   for(let i = 0; i < words.length; i++) {
       if(words[i].length > 5) {
-       		longArr.push(words[i]) 
+       	 longArr.push(words[i]); 
       }
   }
-  
   return longArr;
 };
 
@@ -643,8 +641,7 @@ function removeEWords(sentence) {
          if(!char.includes('e')) {
            str += char + " ";           
          }    
-  }
-  
+  } 
   return str;
 };
 
@@ -659,23 +656,16 @@ console.log(removeEWords('Enter the building')); // 'building'
 
 function maxValue(nums) {
 	let el = nums[0];
-  
   	if(nums.length == 0) {
-      
      return null 
-      
     }else {
-      
       for(let i = 1; i < nums.length; i++) {
-       		if(nums[i] > el) {
-               el = nums[i]; 
-            }
-      }
-      
+       	  if(nums[i] > el) {
+            el = nums[i]; 
+           }
+      } 
     }
-  
   return el;
-  
 };
 
 console.log(maxValue([4, 6, 3, 5, 42, 4])); // 42
