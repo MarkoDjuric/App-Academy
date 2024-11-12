@@ -12,7 +12,15 @@ sumToN(-8)  // returns null
 ***********************************************************************/
 
 // your code here
+function sumToN(number){
+  let counter = 0;
+  if(number < 0){
+    return null
+  }
 
+
+  return 
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumToN;
