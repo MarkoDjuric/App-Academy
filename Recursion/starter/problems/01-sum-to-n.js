@@ -17,10 +17,10 @@ function sumToN(number){
   if(number < 0){
     return null
   }
-
-
-  return 
-}
+  if(number == 1) {
+     return 1
+  }
+  return sumToNum(number - 1) + number;
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumToN;
