@@ -49,7 +49,7 @@ let selectiveMap = function(arr, cb1, cb2){
        }
   }
   return arr;
-};
+}
 
 
 
