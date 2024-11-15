@@ -47,9 +47,9 @@ let selectiveMap = function(arr, cb1, cb2){
        if(cb1(arr[i])){
         arr[i] = cb2(arr[i]);
        }
-  }
+  };
   return arr;
-}
+};
 
 
 
