@@ -24,7 +24,17 @@ console.log(smoothie2("pineapple"));
 ***********************************************************************/
 
 const smoothieMachine = (...ingredients) => {
-  // Your code here
+    let string = "I'm having a smoothie with ";
+  
+  return function mixed(...arr) {
+    for( let el of arr) {
+      console.log(el)
+      string += el;
+      string += " and ";
+    }
+    return string;
+  }
+  mixed()
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
